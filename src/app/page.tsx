@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { ProductCard } from '@/components/ProductCard';
+import { VideoShowcase } from '@/components/VideoShowcase';
 import { getFeaturedProducts, categories } from '@/data/products';
 
 export default function Home() {
@@ -88,6 +89,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Video Showcase */}
+      <VideoShowcase />
 
       {/* Shop by Category */}
       <section className="py-16 lg:py-24">
