@@ -9,15 +9,14 @@ export default function OurMission() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-pink-500 to-purple-600 text-white py-20">
+      <section className="bg-[#1a1a2e] text-white py-20">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <span className="text-6xl mb-6 block">💛</span>
           <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-            Our Mission: Empowering Women
+            Our Mission: <span className="text-[#c9a227]">Empowering Women</span>
           </h1>
-          <p className="text-xl text-pink-100 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             SHEROCIOUS is more than a brand. We&apos;re a movement to celebrate, uplift, 
-            and support the badass women who make our world go round.
+            and support the amazing women who make our world go round.
           </p>
         </div>
       </section>
@@ -41,8 +40,8 @@ export default function OurMission() {
               you love—you&apos;re helping a mother get the support she needs.
             </p>
 
-            <div className="bg-pink-50 border-l-4 border-pink-500 p-6 my-8">
-              <p className="text-pink-800 font-medium text-lg">
+            <div className="bg-[#c9a227]/10 border-l-4 border-[#c9a227] p-6 my-8">
+              <p className="text-gray-800 font-medium text-lg">
                 &quot;We believe every woman deserves to feel supported, celebrated, 
                 and reminded of her incredible strength—especially during the 
                 transformative journey of motherhood.&quot;
@@ -57,21 +56,21 @@ export default function OurMission() {
               how we act, and who we become. That&apos;s why every SHEROCIOUS product 
               features bold, empowering affirmations designed to:
             </p>
-            <ul className="text-gray-700 text-lg space-y-4 mb-8">
+            <ul className="text-gray-700 text-lg space-y-4 mb-8 list-none pl-0">
               <li className="flex items-start">
-                <span className="text-pink-500 mr-3">✓</span>
+                <span className="text-[#c9a227] mr-3 font-bold">•</span>
                 <span>Boost your confidence when you need it most</span>
               </li>
               <li className="flex items-start">
-                <span className="text-pink-500 mr-3">✓</span>
+                <span className="text-[#c9a227] mr-3 font-bold">•</span>
                 <span>Remind you of your inherent worth and strength</span>
               </li>
               <li className="flex items-start">
-                <span className="text-pink-500 mr-3">✓</span>
+                <span className="text-[#c9a227] mr-3 font-bold">•</span>
                 <span>Create daily moments of self-love and positivity</span>
               </li>
               <li className="flex items-start">
-                <span className="text-pink-500 mr-3">✓</span>
+                <span className="text-[#c9a227] mr-3 font-bold">•</span>
                 <span>Spark conversations about self-care and mental health</span>
               </li>
             </ul>
@@ -89,9 +88,9 @@ export default function OurMission() {
           <div className="mt-12 text-center">
             <Link
               href="/shop"
-              className="inline-block bg-gradient-to-r from-pink-600 to-purple-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-pink-700 hover:to-purple-700 transition-all"
+              className="inline-block bg-[#c9a227] text-[#1a1a2e] px-8 py-4 rounded font-bold text-lg hover:bg-[#e8d48a] transition-all"
             >
-              Shop & Support Our Mission →
+              Shop &amp; Support Our Mission
             </Link>
           </div>
         </div>
@@ -101,22 +100,33 @@ export default function OurMission() {
       <section className="bg-gray-50 py-16">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
-            Our Impact So Far
+            Our Commitment
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div className="bg-white p-8 rounded-2xl shadow-md">
-              <div className="text-4xl font-bold text-pink-600 mb-2">5%</div>
+            <div className="bg-white p-8 rounded-lg shadow-sm border">
+              <div className="text-4xl font-bold text-[#c9a227] mb-2">5%</div>
               <div className="text-gray-600">Of every sale donated</div>
             </div>
-            <div className="bg-white p-8 rounded-2xl shadow-md">
-              <div className="text-4xl font-bold text-pink-600 mb-2">1000s</div>
-              <div className="text-gray-600">Of badass women empowered</div>
+            <div className="bg-white p-8 rounded-lg shadow-sm border">
+              <div className="text-4xl font-bold text-[#c9a227] mb-2">1000s</div>
+              <div className="text-gray-600">Of women empowered</div>
             </div>
-            <div className="bg-white p-8 rounded-2xl shadow-md">
-              <div className="text-4xl font-bold text-pink-600 mb-2">💛</div>
-              <div className="text-gray-600">Mothers supported</div>
+            <div className="bg-white p-8 rounded-lg shadow-sm border">
+              <div className="text-4xl font-bold text-[#c9a227] mb-2">100%</div>
+              <div className="text-gray-600">Positive customer reviews</div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Giving Back */}
+      <section className="py-16 bg-[#1a1a2e] text-white">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-6">1 Gift Sold = 1 Gift Given</h2>
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            Every SHEROCIOUS purchase helps us give back to Moms Mental Health organizations 
+            and Cancer Treatment Centers. Together, we&apos;re making a difference.
+          </p>
         </div>
       </section>
     </div>

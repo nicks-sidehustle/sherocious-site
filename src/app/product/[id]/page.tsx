@@ -41,9 +41,9 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
       <div className="bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <nav className="text-sm text-gray-500">
-            <Link href="/" className="hover:text-pink-600">Home</Link>
+            <Link href="/" className="hover:text-[#c9a227]">Home</Link>
             <span className="mx-2">/</span>
-            <Link href="/shop" className="hover:text-pink-600">Shop</Link>
+            <Link href="/shop" className="hover:text-[#c9a227]">Shop</Link>
             <span className="mx-2">/</span>
             <span className="text-gray-900">{product.name}</span>
           </nav>
@@ -56,7 +56,7 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Image */}
             <div className="space-y-4">
-              <div className="relative bg-gradient-to-br from-pink-50 to-purple-50 rounded-2xl aspect-square overflow-hidden">
+              <div className="relative bg-gray-100 rounded-lg aspect-square overflow-hidden">
                 {product.image && !product.image.includes('placeholder') ? (
                   <Image
                     src={product.image}
@@ -67,13 +67,11 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
                   />
                 ) : (
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-9xl">
-                      {product.category === 'blanket-hoodie' ? '🧥' : product.category === 'gift-box' ? '🎁' : '🧦'}
-                    </span>
+                    <span className="text-gray-400">Product Image</span>
                   </div>
                 )}
                 {product.featured && (
-                  <span className="absolute top-4 left-4 bg-pink-600 text-white text-sm font-bold px-4 py-2 rounded-full">
+                  <span className="absolute top-4 left-4 bg-[#c9a227] text-[#1a1a2e] text-sm font-bold px-4 py-2 rounded">
                     BESTSELLER
                   </span>
                 )}
@@ -82,7 +80,7 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
               {product.gallery && product.gallery.length > 0 && (
                 <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">
                   {product.gallery.map((img, i) => (
-                    <div key={i} className="relative aspect-square rounded-lg overflow-hidden bg-gray-100 cursor-pointer hover:ring-2 hover:ring-pink-500 transition-all">
+                    <div key={i} className="relative aspect-square rounded overflow-hidden bg-gray-100 cursor-pointer hover:ring-2 hover:ring-[#c9a227] transition-all">
                       <Image src={img} alt={`${product.name} view ${i + 2}`} fill className="object-cover" />
                     </div>
                   ))}
@@ -92,7 +90,7 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
 
             {/* Info */}
             <div>
-              <span className="text-sm font-medium text-purple-600 bg-purple-100 px-3 py-1 rounded-full">
+              <span className="text-sm font-medium text-[#1a1a2e] bg-gray-200 px-3 py-1 rounded">
                 {categoryLabels[product.category]}
               </span>
 
@@ -114,7 +112,7 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
                 <h3 className="font-bold text-gray-900 mb-3">Affirmations Included:</h3>
                 <div className="flex flex-wrap gap-2">
                   {product.affirmations.map((aff, i) => (
-                    <span key={i} className="bg-pink-100 text-pink-700 px-4 py-2 rounded-full font-medium">
+                    <span key={i} className="bg-gray-100 text-gray-700 px-4 py-2 rounded font-medium">
                       {aff}
                     </span>
                   ))}
@@ -127,19 +125,19 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
                   href={product.amazonUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full block bg-gradient-to-r from-pink-600 to-purple-600 text-white text-center px-8 py-4 rounded-full font-bold text-lg hover:from-pink-700 hover:to-purple-700 transition-all"
+                  className="w-full block bg-[#c9a227] text-[#1a1a2e] text-center px-8 py-4 rounded font-bold text-lg hover:bg-[#e8d48a] transition-all"
                 >
-                  Buy Now on Amazon →
+                  Buy Now on Amazon
                 </a>
                 <p className="text-center text-sm text-gray-500">
-                  ✓ Free shipping • ✓ Free returns • ✓ Secure checkout
+                  Free shipping | Free returns | Secure checkout
                 </p>
               </div>
 
               {/* Mission */}
-              <div className="mt-8 bg-yellow-50 p-4 rounded-xl">
+              <div className="mt-8 bg-[#c9a227]/10 border border-[#c9a227] p-4 rounded">
                 <p className="text-sm text-gray-700">
-                  💛 <strong>5% of this purchase</strong> supports maternal mental health organizations
+                  <strong>5% of this purchase</strong> supports maternal mental health organizations
                 </p>
               </div>
             </div>
@@ -155,21 +153,34 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <span className="text-4xl block mb-3">🧦</span>
               <h3 className="font-bold text-gray-900 mb-2">Premium Quality</h3>
               <p className="text-gray-600">Soft, durable cotton blend that feels amazing on your feet</p>
             </div>
             <div className="text-center">
-              <span className="text-4xl block mb-3">💪</span>
               <h3 className="font-bold text-gray-900 mb-2">Daily Empowerment</h3>
               <p className="text-gray-600">Bold affirmations to boost your confidence with every step</p>
             </div>
             <div className="text-center">
-              <span className="text-4xl block mb-3">🎁</span>
               <h3 className="font-bold text-gray-900 mb-2">Perfect Gift</h3>
-              <p className="text-gray-600">Beautiful packaging makes it the ideal gift for any badass woman</p>
+              <p className="text-gray-600">Beautiful packaging makes it the ideal gift for any amazing woman</p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Reviews */}
+      <section className="py-12 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-2xl font-bold text-gray-900 text-center mb-8">
+            Customer Reviews
+          </h2>
+          <div className="flex justify-center items-center gap-2 mb-8">
+            <span className="text-[#c9a227] text-2xl">★★★★★</span>
+            <span className="text-gray-700 font-medium">5.0 out of 5 stars</span>
+          </div>
+          <p className="text-center text-gray-600">
+            100% positive reviews on Amazon. Customers love the quality, comfort, and empowering messages.
+          </p>
         </div>
       </section>
     </div>
