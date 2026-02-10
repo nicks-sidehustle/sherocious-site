@@ -80,9 +80,9 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
               </div>
               {/* Gallery thumbnails */}
               {product.gallery && product.gallery.length > 0 && (
-                <div className="grid grid-cols-3 gap-2">
+                <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">
                   {product.gallery.map((img, i) => (
-                    <div key={i} className="relative aspect-square rounded-lg overflow-hidden bg-gray-100">
+                    <div key={i} className="relative aspect-square rounded-lg overflow-hidden bg-gray-100 cursor-pointer hover:ring-2 hover:ring-pink-500 transition-all">
                       <Image src={img} alt={`${product.name} view ${i + 2}`} fill className="object-cover" />
                     </div>
                   ))}

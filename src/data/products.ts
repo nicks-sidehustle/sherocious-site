@@ -132,7 +132,14 @@ export const products: Product[] = [
     affirmations: ['Badass Goddess', 'I Am Pretty Amazing', 'I Am Strong & Resilient', 'I Am Brave & Beautiful', 'I Am Bold & Badass'],
     description: 'Ultra-soft sherpa fleece oversized blanket hoodie (48" x 70") with matching Badass Goddess socks. Giant pockets, one size fits most. Handmade quality. 5.0 stars on Amazon!',
     featured: true,
-    gallery: ['/images/products/hoodie-lifestyle.jpg', '/images/products/hoodie-valentines-1.jpg', '/images/products/hoodie-kids.jpg'],
+    gallery: [
+      '/images/products/hoodie-lifestyle.jpg',
+      '/images/products/hoodie-family.jpg',
+      '/images/products/hoodie-couch-duo.jpg',
+      '/images/products/hoodie-lifestyle-collage.jpg',
+      '/images/products/hoodie-valentines-1.jpg',
+      '/images/products/hoodie-kids.jpg',
+    ],
   },
 ];
 
