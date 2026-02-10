@@ -45,9 +45,12 @@ export default function BlogPage() {
           <Link href={`/blog/${posts[0].slug}`} className="group block">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 bg-white rounded-lg shadow-sm border overflow-hidden">
               <div className="relative aspect-video lg:aspect-auto bg-gray-200">
-                <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#1a1a2e] to-[#2a2a4e]">
-                  <span className="text-white/30 text-lg">Featured Image</span>
-                </div>
+                <Image
+                  src={posts[0].image}
+                  alt={posts[0].title}
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="p-8 flex flex-col justify-center">
                 <span className={`inline-block px-3 py-1 rounded text-sm font-medium w-fit mb-4 ${categoryColors[posts[0].category]}`}>
@@ -79,9 +82,12 @@ export default function BlogPage() {
               <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
                 <article className="bg-gray-50 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
                   <div className="relative aspect-video bg-gray-200">
-                    <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#1a1a2e]/80 to-[#2a2a4e]/80">
-                      <span className="text-white/50 text-sm">Article Image</span>
-                    </div>
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      className="object-cover"
+                    />
                     <span className={`absolute top-3 left-3 px-2 py-1 rounded text-xs font-medium ${categoryColors[post.category]}`}>
                       {categoryLabels[post.category]}
                     </span>

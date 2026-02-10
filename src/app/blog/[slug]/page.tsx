@@ -1,5 +1,6 @@
 import { blogPosts, getBlogPostBySlug } from '@/data/blog';
 import Link from 'next/link';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
 export function generateStaticParams() {
@@ -76,11 +77,15 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         </div>
       </header>
 
-      {/* Featured Image Placeholder */}
-      <div className="bg-gradient-to-br from-[#1a1a2e]/10 to-[#c9a227]/10 py-16">
-        <div className="max-w-4xl mx-auto px-4 text-center text-gray-400">
-          Featured Image Area
-        </div>
+      {/* Featured Image */}
+      <div className="relative h-64 md:h-96 bg-gray-200">
+        <Image
+          src={post.image}
+          alt={post.title}
+          fill
+          className="object-cover"
+          priority
+        />
       </div>
 
       {/* Article Content */}
