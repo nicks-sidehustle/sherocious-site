@@ -1,5 +1,6 @@
 import { products, getProductById } from '@/data/products';
 import Link from 'next/link';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
 export function generateStaticParams() {
@@ -54,17 +55,39 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Image */}
-            <div className="bg-gradient-to-br from-pink-50 to-purple-50 rounded-2xl aspect-square flex items-center justify-center">
-              <div className="text-center">
-                <span className="text-9xl block mb-4">
-                  {product.category === 'blanket-hoodie' ? '🧥' : product.category === 'gift-box' ? '🎁' : '🧦'}
-                </span>
+            <div className="space-y-4">
+              <div className="relative bg-gradient-to-br from-pink-50 to-purple-50 rounded-2xl aspect-square overflow-hidden">
+                {product.image && !product.image.includes('placeholder') ? (
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                ) : (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="text-9xl">
+                      {product.category === 'blanket-hoodie' ? '🧥' : product.category === 'gift-box' ? '🎁' : '🧦'}
+                    </span>
+                  </div>
+                )}
                 {product.featured && (
-                  <span className="bg-pink-600 text-white text-sm font-bold px-4 py-2 rounded-full">
+                  <span className="absolute top-4 left-4 bg-pink-600 text-white text-sm font-bold px-4 py-2 rounded-full">
                     BESTSELLER
                   </span>
                 )}
               </div>
+              {/* Gallery thumbnails */}
+              {product.gallery && product.gallery.length > 0 && (
+                <div className="grid grid-cols-3 gap-2">
+                  {product.gallery.map((img, i) => (
+                    <div key={i} className="relative aspect-square rounded-lg overflow-hidden bg-gray-100">
+                      <Image src={img} alt={`${product.name} view ${i + 2}`} fill className="object-cover" />
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
 
             {/* Info */}

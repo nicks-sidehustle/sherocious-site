@@ -9,6 +9,7 @@ export interface Product {
   affirmations: string[];
   description: string;
   featured?: boolean;
+  gallery?: string[];
 }
 
 export const products: Product[] = [
@@ -126,11 +127,12 @@ export const products: Product[] = [
     tagline: 'Goddess-level comfort. Hoodie + matching socks.',
     price: 44.99,
     category: 'blanket-hoodie',
-    image: '/images/products/hoodie-goddess.jpg',
+    image: '/images/products/hoodie-flatlay.jpg',
     amazonUrl: 'https://www.amazon.com/SHEROCIOUS-Wearable-Blanket-Hoodie-birthday/dp/B0DKS57BXX',
-    affirmations: ['Badass Goddess'],
-    description: 'Ultra-soft sherpa fleece oversized blanket hoodie with matching Badass Goddess socks. Giant pockets, one size fits most. 5.0 stars on Amazon!',
+    affirmations: ['Badass Goddess', 'I Am Pretty Amazing', 'I Am Strong & Resilient', 'I Am Brave & Beautiful', 'I Am Bold & Badass'],
+    description: 'Ultra-soft sherpa fleece oversized blanket hoodie (48" x 70") with matching Badass Goddess socks. Giant pockets, one size fits most. Handmade quality. 5.0 stars on Amazon!',
     featured: true,
+    gallery: ['/images/products/hoodie-lifestyle.jpg', '/images/products/hoodie-valentines-1.jpg', '/images/products/hoodie-kids.jpg'],
   },
 ];
 

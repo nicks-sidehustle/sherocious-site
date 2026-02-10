@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Product } from '@/data/products';
 
 interface ProductCardProps {
@@ -12,13 +13,24 @@ export function ProductCard({ product }: ProductCardProps) {
     'blanket-hoodie': 'Blanket Hoodie',
   };
 
+  const hasRealImage = product.image && !product.image.includes('placeholder');
+
   return (
     <div className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
       {/* Image */}
       <div className="relative aspect-square bg-gradient-to-br from-pink-50 to-purple-50 overflow-hidden">
-        <div className="absolute inset-0 flex items-center justify-center text-6xl">
-          {product.category === 'blanket-hoodie' ? '🧥' : '🧦'}
-        </div>
+        {hasRealImage ? (
+          <Image
+            src={product.image}
+            alt={product.name}
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        ) : (
+          <div className="absolute inset-0 flex items-center justify-center text-6xl">
+            {product.category === 'blanket-hoodie' ? '🧥' : product.category === 'gift-box' ? '🎁' : '🧦'}
+          </div>
+        )}
         {product.featured && (
           <span className="absolute top-3 left-3 bg-pink-600 text-white text-xs font-bold px-3 py-1 rounded-full">
             BESTSELLER
