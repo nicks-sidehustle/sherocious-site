@@ -37,6 +37,9 @@ export function Header() {
             <Link href="/our-mission" className="hover:text-[#c9a227] transition-colors font-medium">
               Our Mission
             </Link>
+            <Link href="/blog" className="hover:text-[#c9a227] transition-colors font-medium">
+              Blog
+            </Link>
           </div>
 
           {/* CTA Button */}
@@ -72,6 +75,7 @@ export function Header() {
             <Link href="/shop/socks" className="block hover:text-[#c9a227] font-medium">Socks</Link>
             <Link href="/shop/blanket-hoodies" className="block hover:text-[#c9a227] font-medium">Blanket Hoodies</Link>
             <Link href="/our-mission" className="block hover:text-[#c9a227] font-medium">Our Mission</Link>
+            <Link href="/blog" className="block hover:text-[#c9a227] font-medium">Blog</Link>
           </div>
         )}
       </nav>
