@@ -5,6 +5,7 @@ export function VideoShowcase() {
     { src: '/videos/promo-1.mp4' },
     { src: '/videos/promo-2.mp4' },
     { src: '/videos/promo-3.mp4' },
+    { src: '/videos/promo-4.mp4' },
   ];
 
   return (
@@ -19,9 +20,9 @@ export function VideoShowcase() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
           {videos.map((video, i) => (
-            <div key={i} className="relative rounded-lg overflow-hidden bg-black aspect-[9/16] max-h-[450px] mx-auto w-full">
+            <div key={i} className="relative rounded-lg overflow-hidden bg-black aspect-[9/16] mx-auto w-full">
               <video
                 autoPlay
                 loop
