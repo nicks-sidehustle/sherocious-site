@@ -2,6 +2,7 @@ import { products, getProductById } from '@/data/products';
 import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
+import { AddToCartButton } from '@/components/AddToCartButton';
 
 export function generateStaticParams() {
   return products.map((product) => ({
@@ -121,13 +122,14 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
 
               {/* CTA */}
               <div className="space-y-4">
+                <AddToCartButton product={product} className="w-full text-lg py-4" />
                 <a
                   href={product.amazonUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full block bg-[#c9a227] text-[#1a1a2e] text-center px-8 py-4 rounded font-bold text-lg hover:bg-[#e8d48a] transition-all"
+                  className="w-full block border-2 border-[#1a1a2e] text-[#1a1a2e] text-center px-8 py-4 rounded font-bold text-lg hover:bg-gray-100 transition-all"
                 >
-                  Buy Now on Amazon
+                  Or Buy on Amazon
                 </a>
                 <p className="text-center text-sm text-gray-500">
                   Free shipping | Free returns | Secure checkout

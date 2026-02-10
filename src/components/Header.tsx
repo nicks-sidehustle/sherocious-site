@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import { CartIcon } from './CartIcon';
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -42,14 +43,15 @@ export function Header() {
             </Link>
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
+          {/* CTA Button + Cart */}
+          <div className="hidden md:flex items-center gap-4">
             <Link
               href="/shop"
               className="bg-[#c9a227] text-[#1a1a2e] px-6 py-2 rounded font-bold hover:bg-[#e8d48a] transition-colors"
             >
               Shop Now
             </Link>
+            <CartIcon />
           </div>
 
           {/* Mobile menu button */}
