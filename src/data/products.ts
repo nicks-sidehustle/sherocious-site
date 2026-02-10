@@ -121,27 +121,16 @@ export const products: Product[] = [
 
   // Blanket Hoodies (Gift Sets)
   {
-    id: 'hoodie-beautiful-badass',
-    name: 'Beautiful Badass - Blanket Hoodie Set',
-    tagline: 'Cozy meets fierce. Hoodie + matching socks.',
-    price: 49.99,
-    category: 'blanket-hoodie',
-    image: '/images/products/hoodie-beautiful.jpg',
-    amazonUrl: 'https://www.amazon.com/dp/PLACEHOLDER', // Will update with real URL
-    affirmations: ['Beautiful Badass'],
-    description: 'Oversized blanket hoodie with matching Beautiful Badass socks. Ultimate self-care gift.',
-    featured: true,
-  },
-  {
     id: 'hoodie-badass-goddess',
     name: 'Badass Goddess - Blanket Hoodie Set',
     tagline: 'Goddess-level comfort. Hoodie + matching socks.',
-    price: 49.99,
+    price: 44.99,
     category: 'blanket-hoodie',
     image: '/images/products/hoodie-goddess.jpg',
-    amazonUrl: 'https://www.amazon.com/dp/PLACEHOLDER', // Will update with real URL
+    amazonUrl: 'https://www.amazon.com/SHEROCIOUS-Wearable-Blanket-Hoodie-birthday/dp/B0DKS57BXX',
     affirmations: ['Badass Goddess'],
-    description: 'Oversized blanket hoodie with matching Badass Goddess socks. Perfect gift for her.',
+    description: 'Ultra-soft sherpa fleece oversized blanket hoodie with matching Badass Goddess socks. Giant pockets, one size fits most. 5.0 stars on Amazon!',
+    featured: true,
   },
 ];
 
